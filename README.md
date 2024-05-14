@@ -31,13 +31,13 @@ If you are a Windows user, before running this command, please also run the foll
 
 ## Requirements
 
-In this task, you will need to write a Powershell script, which looks for regions where particular VM size (`Standard_B2pts_v2`) is available for use: 
+In this task, you will need to write a Powershell script, which looks for regions where particular VM size (`Standard_B2pts_v2`) is available for use:
 
 - Write a Powershell script, which implements task requirements in this repo's file `task.ps1`.  
 
-- Folder `data` in this repository contains a set of JSON files. Each file is named after the Azure region and contains a list of VM sizes available in the region. 
+- Folder `data` in this repository contains a set of JSON files. Each file is named after the Azure region and contains a list of VM sizes available in the region.
 
-- Script should loop through the files. In each file, the script should convert data from JSON to a list of objects and search for the object that represents VM size `Standard_B2pts_v2`. If such object was found — the region name should be added to the result list of regions. 
+- Script should loop through the files. In each file, the script should convert data from JSON to a list of objects and search for the object that represents VM size `Standard_B2pts_v2`. If such object was found — the region name should be added to the result list of regions.
 
 - Result list of regions should be exported by script in JSON format to file `result.json` in this repository. Here how the file should look like:
     ```
@@ -53,7 +53,7 @@ After testing the script locally, make sure that the `result.json` is not commit
 
 ## Hints 
 
-- Use `Get-ChildItem` to get a list of files in the `data` directory. Feel free to explore the properties of the returned objects - they have separate properties for the full file path (suitable for the `Get-Content` command) and for the file name (handy if you need the file name). 
+- Use `Get-ChildItem` to get a list of files in the `data` directory. Feel free to explore the properties of the returned objects - they have separate properties for the full file path (suitable for the `Get-Content` command) and for the file name (handy if you need the file name).
 
 - You can get a region name by cutting a suffix '.json' from the file name. In Powershell, you can cut a substring from a string just by using the 'Replace()' method of the string variable or property:
   
