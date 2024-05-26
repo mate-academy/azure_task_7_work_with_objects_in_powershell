@@ -1,4 +1,6 @@
 # Write your code here
+
+# Define the path to the directory containing JSON files
 $dataPath = ".\data"
 
 # Define the VM size we are looking for
@@ -12,7 +14,7 @@ Get-ChildItem -Path $dataPath -Filter *.json | ForEach-Object {
     $file = $_.FullName
 
     # Extract region name from the file name (assuming the file name is the region name)
-    $regionName = [System.IO.Path]::GetFileNameWithoutExtension($file)
+    $regionName = $_.Name.Replace('.json', '')
 
     # Read and convert the JSON file content to PowerShell objects
     $vmSizes = Get-Content -Path $file | ConvertFrom-Json
