@@ -1,6 +1,6 @@
 # Working With Objects in Powershell
 
-What a life! You sent the cost estimates to your investors, and they were not very happy about the numbers. Investors are planning for the application growth; with more users, you will need more VMs, and with more VMs, the cost of one VM will make a bigger impact on the total bill for the cloud infrastructure. They said to you that they invest in your startup if you find a way to cut costs twice for a single VM. After some research, you found this [new ARM-based VM size famiily](https://learn.microsoft.com/en-us/azure/virtual-machines/bpsv2-arm), which might do the trick, but it is not available in all regions yet. 
+What a life! You sent the cost estimates to your investors, and they were not very happy about the numbers. Investors are planning for the application growth; with more users, you will need more VMs, and with more VMs, the cost of one VM will make a bigger impact on the total bill for the cloud infrastructure. They said to you that they invest in your startup if you find a way to cut costs twice for a single VM. After some research, you found this [new ARM-based VM size famiily](https://learn.microsoft.com/en-us/azure/virtual-machines/bpsv2-arm), which might do the trick, but it is not available in all regions yet.
 
 For this task, you need to write a script that will help you find regions where the VM size you need is available.
 
