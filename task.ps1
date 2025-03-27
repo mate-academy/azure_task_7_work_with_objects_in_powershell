@@ -5,7 +5,6 @@ foreach ($name in $array) {
     if ($content)
     {
         $my_array += $name
-        Out-File -Path./result.json -InputObject $filename
     }
 }
 
