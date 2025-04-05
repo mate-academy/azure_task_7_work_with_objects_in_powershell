@@ -1,5 +1,5 @@
-$directoryPath = "$PSScriptRoot\data"
-$resultFilePath = "$PSScriptRoot\result.json"
+$directoryPath = ".\data"
+$resultFilePath = "result.json"
 
 $result = @()
 
