@@ -1,1 +1,1 @@
-# Write your code here
+$files = Get-ChildItem -Path "./data" -Filter "*.json"; $found = @(); foreach ($file in $files) { $data = Get-Content $file.FullName | ConvertFrom-Json; if ($data | Where-Object { $_.name -eq "Standard_B2pts_v2" }) { $found += $file.BaseName } }; $found | ConvertTo-Json | Out-File -FilePath "./result.json" -Encoding utf8
