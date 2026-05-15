@@ -4,7 +4,7 @@ $items = Get-ChildItem data
 $fullJson = @()
 
 foreach ($item in $items) {
-    $region = $item -replace "$PWD/data/" -replace ".json"
+    $region = $item.BaseName
     $context =  Get-Content -Path $item | ConvertFrom-Json
     foreach ($object in $context) {
         if ($object.Name -eq "Standard_B2pts_v2") {
