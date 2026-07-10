@@ -1,4 +1,4 @@
-$files = Get-ChildItem -Path C:/Users/User/PycharmProjects/Mate-Academy/azure_task_7_work_with_objects_in_powershell/data
+$files = Get-ChildItem -Path ./data
 $result = @()
 foreach ($element in $files) {
     $json_text = Get-Content $element -Raw
