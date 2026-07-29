@@ -1,10 +1,12 @@
 $result_list = @()
 $list_files = Get-ChildItem ./data
 foreach ($element in $list_files) {
-  $content = Get-Content $element.FullName -Raw
-  if ($content -match "Standard_B2pts_v2") {
-    $stringVariable = $element.Name.Replace('.json', '')
-    $result_list += $stringVariable
-  }
+  $objects = Get-Content $element.FullName -Raw | ConvertFrom-Json
+  foreach ($object in $objects) {
+        if ($object.Name -eq "Standard_B2pts_v2") {
+            $result_list += $element.BaseName
+            break
+        }
+    }
 }
 $result_list | ConvertTo-Json | Out-File -Path ./result.json
