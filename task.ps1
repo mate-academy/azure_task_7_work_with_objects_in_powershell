@@ -4,7 +4,7 @@ $result = @()
 foreach ($file in $files) {
     $vms = Get-Content $file | ConvertFrom-Json
 
-    $found = $vms.Name -eq "Standard_B2pts_v2"
+    $found = $vms | Where-Object { $_.Name -eq "Standard_B2pts_v2" }
 
     if ($found) {
         $result += $file.Name.Replace('.json', '')
